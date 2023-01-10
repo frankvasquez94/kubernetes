@@ -1,7 +1,14 @@
-$sudo apt-get install nfs-kernel-server // Instalar el server nfs en todos los nodos
-$sudo mkdir /storage // creat el storage en el node de controller
-$sudo chmod 777 /storage // Asignarle permisos al storage
-$sudo sh -c 'echo "/storage *(rw,no_root_squash)" > /etc/exports'  // exportar el stoage
-$sudo systemctl enable --now nfs-server  // Habilitar nfs-server
-$systemctl status nfs-server  // verifcar el status del server nfs-server
-$sudo showmount -e localhost // ver el storage
+1. Instalar el server nfs en todos los nodos
+$sudo apt-get install nfs-kernel-server 
+2. // crear el storage en el node de controller
+$sudo mkdir /storage
+3. Asignarle permisos al storage
+$sudo chmod 777 /storage
+4. exportar el stoage
+$sudo sh -c 'echo "/storage *(rw,no_root_squash)" > /etc/exports'
+5. Habilitar nfs-server
+$sudo systemctl enable --now nfs-server
+6. verifcar el status del server nfs-server
+$systemctl status nfs-server
+7. ver el storage
+$sudo showmount -e localhost
