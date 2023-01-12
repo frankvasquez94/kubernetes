@@ -12,3 +12,9 @@ $sudo systemctl enable --now nfs-server
 $systemctl status nfs-server
 7. ver el storage
 $sudo showmount -e localhost
+
+
+Nota: Si el server nfs-server no puede leer en /etc/exports, es de reiniciar
+el server
+
+$ systemctl restart nfs-server

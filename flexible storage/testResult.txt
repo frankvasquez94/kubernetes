@@ -1,0 +1,22 @@
+1. Crear Persistent PersistentVolume
+
+$ kubectl create -f nfs-pv.yaml
+
+2. Crear Peristent Volume claim
+$ kubectl create -f nfs-pvc.yaml
+
+3. Crear pod
+
+$ kubectl create -f nfs-pv-pod.yaml
+
+4. Revisar la ip del nodo donde esta corriendo nfs-server
+$ ifconfig
+
+5. Ver ip y ejecutar showmount en el otro node
+$ showmount -e 172.17.1.3
+
+6. Crear archivo en un pod
+$ kubectl exec -it nfs-pv-pod -c nfs-client1 -- touch /nfsshare/myfile
+
+7.Verificar que el archivo existe en el storage
+$ ls -l /storage // Para ver el arhivo
