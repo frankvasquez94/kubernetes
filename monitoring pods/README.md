@@ -1,9 +1,9 @@
 
-# Momitoring pods
+# Monitoring pods
 
-1. To monitoring pods and node performance, resource usages statistic must be gathered.
-2. Metrics server is required to do so
-3. Before using metrics server must be installed
+1. To monitor pods and node performance, resource usages statistic must be gathered.
+2. Metrics server is required to do so.
+3. Before using metrics server must be installed.
 
 # install metrics server
 
@@ -42,7 +42,3 @@ Metrics server now is running.
 ``` 
 kubectl top pods -A
 ```
-
-
-
-
