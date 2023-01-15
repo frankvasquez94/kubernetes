@@ -24,7 +24,7 @@ sudo apt-get install helm
 helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx   --namespace ingress-nginx --create-namespace
 ```
 
-#### Ver los pods den namespace de ingress-nginx
+#### Get pods from ingress-nginx namespace
 
 ```
 kubectl get pods -n ingress-nginx
