@@ -9,7 +9,7 @@
 
 #### Create oldnginx configMap
 ```
-echo oldsite" > oldnginx.html
+echo oldsite > oldnginx.html
 ```
 
 ```
@@ -77,7 +77,7 @@ Replace old string for new by using vim
 
 #### Create newnginx configMap
 ```
-echo newsite" > newnginx.html
+echo newsite > newnginx.html
 ```
 
 ```
@@ -166,3 +166,4 @@ kubectl scale deploy newnginx --replicas=3
 ```
 kubectl scale deploy oldnginx --replicas=0
 ```
+
