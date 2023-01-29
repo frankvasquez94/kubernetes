@@ -81,7 +81,7 @@ root@controlplane:~$
 
 We can see that the pod is not running properly.
 
-We can as kubernetes that describes the pod and check what is happening.
+We can ask kubernetes that describes the pod and check what is happening.
 
 ```
 kubectl describe pod nginxsecure
