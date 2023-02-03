@@ -15,13 +15,20 @@
 ```
 kubectl create deploy daemonnginx --image=nginx --dry-run=client -o yaml > daemonnginx.yaml
 ```
+
 2. Edit the daemonnginx.yaml
--- Change **kind: Deployment** to **kind: DaemonSet**
--- remove **replicas**
--- Remove **status**
--- Remove **strategy**
+2.1 Change **kind: Deployment** to **kind: DaemonSet**
+2.2 remove **replicas**
+2.3 Remove **status**
+2.4 Remove **strategy**
+
 3. Create the DaemonSet
 
 ```
 kubectl create -f daemonnginx.yaml
+```
+4. Check los ds
+
+```
+kubectl get ds -A
 ```
